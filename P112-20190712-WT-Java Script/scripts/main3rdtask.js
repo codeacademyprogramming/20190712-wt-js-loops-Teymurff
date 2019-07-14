@@ -9,7 +9,7 @@ function evennumbers(num1, num2) {
         for (let i = 0; i <= b; i++) {
             if (i % 2 == 0) {
                 console.log(i);
-            }
+            } 
         }
     } else {
         alert("1st number has to be smaller than 2nd")

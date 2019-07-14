@@ -11,7 +11,7 @@ function minusplus (x,y) {
      
         let result = a + " " + b;
         return result;
-} else if (x<0 && y>0|| x>0 && y<0)
+} else if (x<0 && y>0 || x>0 && y<0)
 {
     x*= 0.5;
     y*= 0.5;
@@ -21,8 +21,7 @@ function minusplus (x,y) {
 
     let result = a + " " + b;
     return result;
-} else if (x<=0.5 && x>=2.0 || y<=0.5 && y>=2.0) {
-if (x>0 && y>0)  {
+} else if (x!=-x && y!=-y) {
     x/= 10;
     y/= 10;
 
@@ -31,10 +30,13 @@ if (x>0 && y>0)  {
 
     let result = a + " " + b;
     return result;
-}
+
+} else {
+console.log("Don't change anything");
 }
 }
 
-console.log(minusplus(5,-6));
-console.log(minusplus(-8,-10));
-console.log(minusplus(11,10));
+console.log(minusplus(-5,-6));
+console.log(minusplus(2,-3));
+console.log(minusplus(5,7));
+console.log(minusplus(0,1));

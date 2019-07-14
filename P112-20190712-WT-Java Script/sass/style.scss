@@ -16,12 +16,10 @@ li {
   list-style: none;
 }
 header {
+  .section-bootstrapmade{
   .firstnav {
     font-family: arial, sans-serif;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include navalign(10px);
     border-bottom: 1px solid #ddd;
     .borderimg {
       border-right: 1px solid #ddd;
@@ -34,13 +32,7 @@ header {
     ul {
       @include ulalign;
       .graybtn {
-        font-size: 17px;
-        border: 1px solid #dfdfdf;
-        padding: 10px;
-        color: #828282;
-        margin-left: 5px;
-        border-radius: 4px;
-        line-height: 1px;
+     @include graybuttons;
         &:hover {
           color:#00a6eb;
           transition: 0.5s;
@@ -53,19 +45,25 @@ header {
         background-color: #00a6eb;
         color: #fff;
         font-size: 14px;
-        padding: 12px 14px;
+        padding: 14px 14px;
         border-radius: 4px;
         line-height: 1px;
         margin-left: 5px;
+        &:hover {
+          background-color: #1BBCFF;
+          transition: 0.5s;
+        }
+        p {
+          margin-left: 3px;
+        }
       }
   }
   }
+}
+  .section-contact{
+    border-bottom: 1px solid #eee;
   .secondnav {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
+@include navalign(10px);
     .contactinfo {
       font-family: "Open Sans", sans-serif;
       display: flex;
@@ -79,10 +77,16 @@ header {
           font-size: 14px;
           color: #555;
           margin-left: 5px;
+          line-height: 1;
+          &:hover {
+            color:$color-blue;
+            transition: 0.5s;
+          }
         }
         i {
           font-size: 14px;
           color: $color-blue;
+          margin-top: 2px;
         }
       }
       .phone {
@@ -104,7 +108,7 @@ header {
       ul {
         @include ulalign;
         a {
-          padding: 4px 12px;
+          padding: 4px 13px;
           color: #555;
           line-height: 1px;
           &:hover {
@@ -121,11 +125,10 @@ header {
       }
     }
   }
+}
+.section-reveal {
   .thirdnav {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@include navalign(20px);
     .logo {
     h1 {
       font-size: 42px;
@@ -146,8 +149,38 @@ header {
       .active {
         color: $color-blue;
       }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        z-index: 10;
+        &:hover .dropdown-menu {
+          display: block;
+        }
+        .dropdown-hover {
+          display: inline-block;
+          padding: 10px;
+          color: #555;
+          border:none;
+          &:hover {
+            color: $color-blue;
+          }
+        }
+        .dropdown-menu {
+          position: absolute;
+          display: none;
+          top: 100%;
+          left: 0;
+          min-width:200px;
+          color: #555;
+          box-shadow: 0 3px 2px;
+          a {
+            display: block;
+            padding: 10px;
+          }
+        }
+      }
       a {
-        padding: 10px 8px;
+        padding: 10px 12px;
         color: #555;
         font-family: "Raleway", sans-serif;
         font-weight: 700;
@@ -160,4 +193,5 @@ header {
     }
   }
   }
+}
 }
